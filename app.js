@@ -15,6 +15,10 @@ function turnCounter() {
   }
 }
 
-$(document).ready(function(){
+function boxClick(e) {
+  console.log(e.target.id);
+}
 
+$(document).ready(function(){
+  $('.box').click(boxClick);
 });
