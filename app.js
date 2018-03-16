@@ -23,7 +23,21 @@ function turnCounter() {
 
 function checkWinner() {
   if (boardArr[0] === boardArr[1] & boardArr[0] === boardArr[2]) {
-    console.log('winner');
+    $('h2').text(currentPlayer + ' has won the game!');
+  } else if (boardArr[3] === boardArr[4] & boardArr[3] === boardArr[5]){
+    $('h2').text(currentPlayer + ' has won the game!');
+  } else if (boardArr[6] === boardArr[7] & boardArr[6] === boardArr[8]){
+    $('h2').text(currentPlayer + ' has won the game!');
+  } else if (boardArr[0] === boardArr[3] & boardArr[0] === boardArr[6]){
+    $('h2').text(currentPlayer + ' has won the game!');
+  } else if (boardArr[1] === boardArr[4] & boardArr[1] === boardArr[7]){
+    $('h2').text(currentPlayer + ' has won the game!');
+  } else if (boardArr[2] === boardArr[5] & boardArr[2] === boardArr[8]){
+    $('h2').text(currentPlayer + ' has won the game!');
+  } else if (boardArr[0] === boardArr[4] & boardArr[0] === boardArr[8]){
+    $('h2').text(currentPlayer + ' has won the game!');
+  } else if (boardArr[2] === boardArr[5] & boardArr[2] === boardArr[8]){
+    $('h2').text(currentPlayer + ' has won the game!');
   }
 }
 
