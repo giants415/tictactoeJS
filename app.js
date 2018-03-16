@@ -10,7 +10,6 @@ const player2 = 'O';
 
 function turnCounter() {
   turnCount++;
-  console.log(turnCount);
   if (turnCount == 10) {
     console.log('game over man!');
   } else {
@@ -22,9 +21,16 @@ function turnCounter() {
   }
 }
 
+function checkWinner() {
+  console.log(boardArr);
+}
+
 function boxClick(e) {
   const clickedBox = e.target;
   clickedBox.append(currentPlayer);
+  boardArr[clickedBox.id] = currentPlayer;
+  console.log(boardArr);
+  checkWinner();
   turnCounter();
 }
 
