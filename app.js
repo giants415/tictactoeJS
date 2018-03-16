@@ -22,7 +22,7 @@ function boxClick(e) {
   const clickedBox = e.target;
   clickedBox.append('O');
 }
-2
+
 $(document).ready(function(){
   $('.box').click(boxClick);
 });
