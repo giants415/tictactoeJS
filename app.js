@@ -1,7 +1,7 @@
 const boardArr = [
-  0,0,0,
-  0,0,0,
-  0,0,0
+  0,1,2,
+  3,4,5,
+  6,7,8
 ];
 
 let turnCount = 0;
@@ -22,7 +22,9 @@ function turnCounter() {
 }
 
 function checkWinner() {
-  console.log(boardArr);
+  if (boardArr[0] === boardArr[1] & boardArr[0] === boardArr[2]) {
+    console.log('winner');
+  }
 }
 
 function boxClick(e) {
@@ -30,11 +32,14 @@ function boxClick(e) {
   clickedBox.append(currentPlayer);
   boardArr[clickedBox.id] = currentPlayer;
   console.log(boardArr);
-  checkWinner();
+  if (turnCount >= 3) {
+    checkWinner();
+  }
   turnCounter();
 }
 
 $(document).ready(function(){
   turnCounter();
+  console.log(turnCount);
   $('.box').click(boxClick);
 });
